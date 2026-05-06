@@ -19,8 +19,10 @@ import lombok.Setter;
 import lombok.ToString;
 
 
-
 //2. ja no bazes klases bus ari repo
+//a. TABLE PER CLASS - bazes un bernu klasei katrai ir sava tabula DB, bernu visi dati glabas bernu tabula
+//b. JOINED - bazes dati glabajas bazes tabula un bernu tabulas tikai individuale dati
+//c. SINGLE_TABLE - gan bazes dati, gan bernu dati visi viena tabula (jaaizkomente @Entity un @Table bernu klases)
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name = "PersonTable")
 @Entity
