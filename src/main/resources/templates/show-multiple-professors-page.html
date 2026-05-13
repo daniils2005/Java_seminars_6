@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+	<table>
+		<tr th:each="tempS : ${package}">
+			<td th:text="${tempS.pid}"></td>
+			<td th:text="${tempS.name}"></td>
+			<td th:text="${tempS.surname}"></td>
+			<td th:text="${tempS.degree}"></td>
+		</tr>
+
+	</table>
+
+</body>
+
+</html>

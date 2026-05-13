@@ -36,7 +36,7 @@ public class JavaSeminar6Application {
 				Student stud2 = new Student("Janis", "Berzins");
 				studRepo.saveAll(Arrays.asList(stud1,stud2));
 				
-				Professor prof1 = new Professor("Vairis", "Caune", Degree.phd);
+				Professor prof1 = new Professor("Vairis", "Caune", Degree.unknown);
 				Professor prof2 = new Professor("Galina", "Hilkevica",Degree.phd);
 				profRepo.saveAll(Arrays.asList(prof1, prof2));
 				
