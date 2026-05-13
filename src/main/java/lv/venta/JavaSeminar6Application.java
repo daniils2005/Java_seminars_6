@@ -38,11 +38,22 @@ public class JavaSeminar6Application {
 				
 				Professor prof1 = new Professor("Vairis", "Caune", Degree.unknown);
 				Professor prof2 = new Professor("Galina", "Hilkevica",Degree.phd);
+				Professor prof3 = new Professor("Jelena", "Mihailova", Degree.other);
 				profRepo.saveAll(Arrays.asList(prof1, prof2));
 				
 				Course course1 = new Course("Algoritmu teorija", 3, prof1);
 				Course course2 = new Course("Matematiska analize", 6, prof2);
-				courRepo.saveAll(Arrays.asList(course1, course2));
+				Course course3 = new Course("Paralele programmesana", 4, prof1);
+				course2.addProfessor(prof3);
+				courRepo.saveAll(Arrays.asList(course1, course2, course3));
+				
+				prof1.addCourse(course1);
+				prof1.addCourse(course3);
+				prof2.addCourse(course2);
+				prof3.addCourse(course2);
+				profRepo.save(prof1); //saglaba datubazu limeni
+				profRepo.save(prof2);
+				profRepo.save(prof3);
 				
 				Grade gr1 = new Grade(10, stud1, course1);//Rendijs nopelnija 10 Algoritmi
 				Grade gr2 = new Grade(7, stud1, course2);//Rendijs nopelnija 7 Matematika

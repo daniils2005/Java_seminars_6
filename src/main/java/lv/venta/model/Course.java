@@ -52,7 +52,7 @@ public class Course {
 	private int creditPoints;
 	
 	@ManyToMany
-	@JoinTable(name = "profCourseTable", joinColumns = @JoinColumn(name = "Pid"), inverseJoinColumns = @JoinColumn(name = "Cid"))
+	@JoinTable(name = "profCourseTable", joinColumns = @JoinColumn(name = "Cid"), inverseJoinColumns = @JoinColumn(name = "Pid"))
 	@ToString.Exclude
 	private Collection<Professor> professors = new ArrayList<Professor>();
 	
@@ -67,7 +67,7 @@ public class Course {
 		try {
 			addProfessor(professor);
 		} catch(Exception e) {
-			System.out.println(e.getMessage())''
+			System.out.println(e.getMessage());
 		}
 	}
 	

@@ -8,8 +8,8 @@ import lv.venta.model.Course;
 
 public interface ICourseRepo extends CrudRepository<Course, Long>{
 
-	ArrayList<Course> findByProfessorPid(long id);
-
 	boolean existsByTitle(String title);
+
+	ArrayList<Course> findByProfessorsPid(long id);
 
 }
