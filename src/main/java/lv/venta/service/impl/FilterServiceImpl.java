@@ -49,7 +49,7 @@ public class FilterServiceImpl implements IFilterService {
 		if(id <= 0) {
 			throw new Exception("id nevar but negativs");
 		}
-		if(profRepo.existsById(id)) {
+		if(!profRepo.existsById(id)) {
 			throw new Exception("Nevar atgriezt kuru, jo profesors ar id " + id + " neeksiste");
 		}
 		ArrayList<Course> result = courseRepo.findByProfessorPid(id);

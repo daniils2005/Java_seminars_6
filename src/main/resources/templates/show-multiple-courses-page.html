@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+	<table>
+		
+		<tr th:each="tempS : ${package}">
+			<td th:text="${tempS.cid}"></td>
+			<td th:text="${tempS.title}"></td>
+			<td th:text="${tempS.creditPoints}"></td>
+			<td th:text="${tempS.professor.name}"></td>
+			<td th:text="${tempS.professor.surname}"></td>
+		</tr>
+	</table>
+</body>
+
+</html>
